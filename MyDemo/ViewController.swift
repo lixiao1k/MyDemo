@@ -15,14 +15,19 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         let touchView = UIView(frame: CGRect(x: 60, y: 60, width: 200, height: 200))
         touchView.backgroundColor = UIColor.black
-        touchView.layer.shadowColor = UIColor.black.cgColor
-        touchView.layer.shadowOffset = CGSize(width: 10.0, height: 10.0)
-        touchView.layer.shadowOpacity = 0.45
-        touchView.layer.shadowRadius = 5.0
-        self.view.addSubview(touchView)
+        touchView.layer.cornerRadius = 40
+        touchView.layer.masksToBounds = true
+        
+        let subView = UIView(frame: CGRect(x: 0, y: 0, width: 200, height: 100))
+        subView.backgroundColor = UIColor.gray
+        
+        touchView.addSubview(subView)
         
         let guesture = UITapGestureRecognizer(target: self, action: #selector(self.SingleTap))
         touchView.addGestureRecognizer(guesture)
+        self.view.addSubview(touchView)
+        
+
         
         
     }
