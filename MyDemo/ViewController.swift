@@ -9,36 +9,30 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    var label:UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        let rect = CGRect(x: 20, y: 60, width: 240, height: 240)
-        let gradientView = UIView(frame: rect)
+        self.view.backgroundColor = UIColor.brown
+        label = UILabel(frame: CGRect(x: 40, y: 100, width: 240, height: 44))
+        label.text = ""
+        self.view.addSubview(label)
         
-        let gradientLayer = CAGradientLayer()
-        gradientLayer.frame = gradientView.frame
+        let button = UIButton(frame: CGRect(x: 40, y: 180, width: 240, height: 44))
+        button.setTitle("打开新的视图控制器", for:UIControlState())
+        button.backgroundColor = UIColor.black
+        button.addTarget(self, action: #selector(ViewController.openViewController), for: .touchUpInside)
+        self.view.addSubview(button)
         
-        let fromColor = UIColor.yellow.cgColor
-        let midColor = UIColor.blue.cgColor
-        let endColor = UIColor.red.cgColor
-        
-        gradientLayer.colors = [fromColor,midColor,endColor]
-        gradientLayer.startPoint = CGPoint(x: 0, y: 0)
-        gradientLayer.endPoint = CGPoint(x: 1, y: 1)
-        gradientLayer.locations = [0,0.3,1]
-        
-        gradientView.layer.addSublayer(gradientLayer)
-        self.view.addSubview(gradientView)
-    }
-    
-    func SingleTap(){
-        print("You touched me.")
-    }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    }
+    func openViewController(){
+        let newViewController = NewViewController()
+        newViewController.labelTxt = "传递的参数!"
+        newViewController.viewController = self
+        self.present(newViewController, animated: true, completion: nil)
     }
 
 }
