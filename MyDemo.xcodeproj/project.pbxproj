@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		092FEF191F14A8B5001F8937 /* CustomerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092FEF181F14A8B5001F8937 /* CustomerViewController.swift */; };
 		09F711691F147771001E0286 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F711681F147771001E0286 /* AppDelegate.swift */; };
 		09F7116B1F147771001E0286 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F7116A1F147771001E0286 /* ViewController.swift */; };
 		09F7116E1F147771001E0286 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09F7116C1F147771001E0286 /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		092FEF181F14A8B5001F8937 /* CustomerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerViewController.swift; sourceTree = "<group>"; };
 		09F711651F147771001E0286 /* MyDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09F711681F147771001E0286 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		09F7116A1F147771001E0286 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +76,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		092FEF171F14A7EE001F8937 /* Customer */ = {
+			isa = PBXGroup;
+			children = (
+				092FEF181F14A8B5001F8937 /* CustomerViewController.swift */,
+			);
+			name = Customer;
+			sourceTree = "<group>";
+		};
 		09F7115C1F147771001E0286 = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +107,7 @@
 		09F711671F147771001E0286 /* MyDemo */ = {
 			isa = PBXGroup;
 			children = (
+				092FEF171F14A7EE001F8937 /* Customer */,
 				09F711681F147771001E0286 /* AppDelegate.swift */,
 				09F7116A1F147771001E0286 /* ViewController.swift */,
 				09F7116C1F147771001E0286 /* Main.storyboard */,
@@ -193,7 +204,8 @@
 				TargetAttributes = {
 					09F711641F147771001E0286 = {
 						CreatedOnToolsVersion = 8.3.3;
-						ProvisioningStyle = Manual;
+						DevelopmentTeam = NF7NEB4X74;
+						ProvisioningStyle = Automatic;
 					};
 					09F711781F147771001E0286 = {
 						CreatedOnToolsVersion = 8.3.3;
@@ -259,6 +271,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				092FEF191F14A8B5001F8937 /* CustomerViewController.swift in Sources */,
 				09F7116B1F147771001E0286 /* ViewController.swift in Sources */,
 				09F711691F147771001E0286 /* AppDelegate.swift in Sources */,
 			);
@@ -414,7 +427,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = NF7NEB4X74;
 				INFOPLIST_FILE = MyDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -429,7 +444,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = NF7NEB4X74;
 				INFOPLIST_FILE = MyDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -513,6 +530,7 @@
 				09F7118F1F147771001E0286 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		09F711901F147771001E0286 /* Build configuration list for PBXNativeTarget "MyDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +539,7 @@
 				09F711921F147771001E0286 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		09F711931F147771001E0286 /* Build configuration list for PBXNativeTarget "MyDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -529,6 +548,7 @@
 				09F711951F147771001E0286 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
