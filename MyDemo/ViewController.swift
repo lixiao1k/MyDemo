@@ -13,23 +13,23 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        let touchView = UIView(frame: CGRect(x: 60, y: 60, width: 200, height: 200))
-        touchView.backgroundColor = UIColor.black
-        touchView.layer.cornerRadius = 40
-        touchView.layer.masksToBounds = true
+        let rect = CGRect(x: 20, y: 60, width: 240, height: 240)
+        let gradientView = UIView(frame: rect)
         
-        let subView = UIView(frame: CGRect(x: 0, y: 0, width: 200, height: 100))
-        subView.backgroundColor = UIColor.gray
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = gradientView.frame
         
-        touchView.addSubview(subView)
+        let fromColor = UIColor.yellow.cgColor
+        let midColor = UIColor.blue.cgColor
+        let endColor = UIColor.red.cgColor
         
-        let guesture = UITapGestureRecognizer(target: self, action: #selector(self.SingleTap))
-        touchView.addGestureRecognizer(guesture)
-        self.view.addSubview(touchView)
+        gradientLayer.colors = [fromColor,midColor,endColor]
+        gradientLayer.startPoint = CGPoint(x: 0, y: 0)
+        gradientLayer.endPoint = CGPoint(x: 1, y: 1)
+        gradientLayer.locations = [0,0.3,1]
         
-
-        
-        
+        gradientView.layer.addSublayer(gradientLayer)
+        self.view.addSubview(gradientView)
     }
     
     func SingleTap(){
